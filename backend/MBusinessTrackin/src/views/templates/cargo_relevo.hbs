@@ -1,0 +1,54 @@
+{{>header}}
+<main>
+    <h2>Cargo Relevo Almacen</h2>
+    <table id="cabecera">
+        <tbody>
+            <tr>
+                <th>Almacen:</th>
+                <td>{{Almacene.Nombre}}</td>
+                <th>Correo:</th>
+                <td>{{UsuarioDestino.Correo}}</td>
+            </tr>
+            <tr>
+                <th>DNI:</th>
+                <td>{{UsuarioDestino.NroDocumento}}</td>
+                <th>Persona asignada:</th>
+                <td>{{UsuarioDestino.ApellidoPaterno}} {{UsuarioDestino.ApellidoMaterno}} {{UsuarioDestino.Nombres}}
+                </td>
+            </tr>
+            <tr>
+                <th>Comentario:</th>
+                <td>{{Comentario}}</td>
+            </tr>
+        </tbody>
+    </table>
+    <table id="detalle">
+        <thead>
+            <tr>
+                <th></th>
+                <th>Código artículo</th>
+                <th>Artículo</th>
+                <th>Categoría</th>
+                <th>Negocio</th>
+                <th>Tipo</th>
+                <th>Cantidad</th>
+                <th>Stock</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each DetalleRelevoAlmacens}}
+            <tr>
+                <td></td>
+                <td>{{CodigoArticulo}}</td>
+                <td>{{DescripcionArticulo}}</td>
+                <td>{{CategoriaArticulo}}</td>
+                <td>{{Negocio}}</td>
+                <td>{{Tipo}}</td>
+                <td class="text-right">{{Cantidad}}</td>
+                <td class="text-right">{{Stock.Cantidad}}</td>
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+</main>
+{{>footer}}

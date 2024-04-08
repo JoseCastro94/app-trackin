@@ -1,0 +1,59 @@
+{{>header}}
+<main>
+    <h2>Entrega</h2>
+    <table id="cabecera">
+        <tbody>
+        <tr>
+            <th># Despacho:</th>
+            <td>{{codigo}}</td>
+            <th># Solicitud:</th>
+            <td>{{solicitud}}</td>
+            <th>Estado:</th>
+            <td>{{estado}}</td>
+        </tr>
+        <tr>
+            <th>Almacén:</th>
+            <td>{{almacen}}</td>
+            <th>F. Entrega:</th>
+            <td>{{fecha}}</td>
+            <th>Horario:</th>
+            <td>{{hora}}</td>
+        </tr>
+        <tr>
+            <th>P. Asignada:</th>
+            <td colspan="5">{{asignado}}</td>
+        </tr>
+        </tbody>
+    </table>
+    <table id="detalle">
+        <thead>
+        <tr>
+            <td></td>
+            <td>Descripción</td>
+            <td>Cod. Prod.</td>
+            <td>Serie</td>
+            <td>Negocio</td>
+            <td>Picking</td>
+            <td>Entregado</td>
+            <td>Almacén</td>
+            <td>Estado</td>
+        </tr>
+        </thead>
+        <tbody>
+        {{#each DetalleDespachoSolicituds}}
+            <tr>
+                <td></td>
+                <td>{{nombre}}</td>
+                <td>{{codigo}}</td>
+                <td>{{hasSerie serie}}</td>
+                <td>{{negocio}}</td>
+                <td class="text-right">{{picking}}</td>
+                <td class="text-right">{{entrega}}</td>
+                <td>{{almacen}}</td>
+                <td>{{estado}}</td>
+            </tr>
+        {{/each}}
+        </tbody>
+    </table>
+</main>
+{{>footer}}

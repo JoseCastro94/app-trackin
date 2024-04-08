@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div style="align-items: center; display: flex; height: 70px; justify-content: flex-start;
+                padding: 0px 70px; box-shadow: 0 5px 10px rgba(0,0,0,.1);">
+    <img src="cid:logo" alt="Logo" height="40px"/>
+</div>
+<div style="padding: 20px 70px; color: #000064;">
+    <h2>Devolución</h2>
+    <table style="margin: 20px 0px; width: 100%;">
+        <tbody>
+        <tr>
+            <th style="text-align: left;"># Despacho:</th>
+            <td style="text-align: left;">{{codigo}}</td>
+            <th style="text-align: left;">Negocio:</th>
+            <td style="text-align: left;">{{cuenta}}</td>
+            <th style="text-align: left;">P. Asignada:</th>
+            <td style="text-align: left;">{{asignado}}</td>
+            <th style="text-align: left;">Código</th>
+            <td style="text-align: left;">{{num_doc}}</td>
+        </tr>
+        <tr>
+            <th style="text-align: left;">Estado:</th>
+            <td style="text-align: left;">{{estado}}</td>
+            <th style="text-align: left;">Almacén:</th>
+            <td style="text-align: left;">{{almacen}}</td>
+            <th style="text-align: left;">F. Entrega:</th>
+            <td style="text-align: left;">{{fecha}}</td>
+            <td colspan="2"></td>
+        </tr>
+        </tbody>
+    </table>
+    <table style="width: 100%;">
+        <thead>
+        <tr>
+            <td></td>
+            <td>Descripción</td>
+            <td>Cod. Prod.</td>
+            <td>Serie</td>
+            <td>P. Asignada</td>
+            <td>Devolución</td>
+            <td>Plazo Dev.</td>
+            <td>Evaluación</td>
+            <td>Cant. Entrega</td>
+            <td>Cant. Dev.</td>
+            <td>Almacén</td>
+            <td>Estado</td>
+        </tr>
+        </thead>
+        <tbody>
+        {{#each detalle}}
+            <tr>
+                <td style="padding: 0px; width: 10px; background-color: #399AFF; border-radius: 5px;"></td>
+                <td style="background-color: #eeeeee; padding: 5px 8px; border-radius: 5px;">{{descripcion}}</td>
+                <td style="background-color: #eeeeee; padding: 5px 8px; border-radius: 5px;">{{codigo}}</td>
+                <td style="background-color: #eeeeee; padding: 5px 8px; border-radius: 5px;">{{hasSerie serie}}</td>
+                <td style="background-color: #eeeeee; padding: 5px 8px; border-radius: 5px;">{{num_doc}}</td>
+                <td style="background-color: #eeeeee; padding: 5px 8px; border-radius: 5px; text-align: center;">{{devolucion}}</td>
+                <td style="background-color: #eeeeee; padding: 5px 8px; border-radius: 5px; text-align: center;">INDEFINIDO</td>
+                <td style="background-color: #eeeeee; padding: 5px 8px; border-radius: 5px; text-align: center">{{evaluacion}}</td>
+                <td style="background-color: #eeeeee; padding: 5px 8px; border-radius: 5px; text-align: right;">{{cantidad}}</td>
+                <td style="background-color: #eeeeee; padding: 5px 8px; border-radius: 5px; text-align: right;">{{cantidad_devolucion}}</td>
+                <td style="background-color: #eeeeee; padding: 5px 8px; border-radius: 5px;">{{almacen}}</td>
+                <td style="background-color: #eeeeee; padding: 5px 8px; border-radius: 5px;">{{estado}}</td>
+            </tr>
+        {{/each}}
+        </tbody>
+    </table>
+</div>
+<div style="align-items: center; display: flex; height: 70px; justify-content: flex-start;
+                padding: 0px 70px; background-color: #000064; color: #FFFFFF;">
+    <h4>Consultas: helpin@grupotawa.com</h4>
+</div>
+</body>
+</html>

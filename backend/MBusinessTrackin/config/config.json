@@ -1,0 +1,9 @@
+{
+  "development": {
+    "username": "admtrackin",
+    "password": "@dm1n$tr4ck1n$$test",
+    "database": "tw-db-trackin",
+    "host": "tawa-app-db-des-001.ctqoiasdeqhp.us-east-1.rds.amazonaws.com",
+    "dialect": "mariadb"
+  }
+}

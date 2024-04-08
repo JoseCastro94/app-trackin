@@ -1,0 +1,67 @@
+{{>header}}
+<main>
+    <h2>Devolución</h2>
+    <table id="cabecera">
+        <tbody>
+        <tr>
+            <th># Devolución:</th>
+            <td>{{codigo}}</td>
+            <th>Almacen:</th>
+            <td>{{almacen}}</td>
+        </tr>
+        <tr>
+            <th>DNI:</th>
+            <td>{{num_doc}}</td>
+            <th>Persona asignada:</th>
+            <td>{{asignado}}</td>
+        </tr>
+        <tr>
+            <th>Estado:</th>
+            <td>{{estado}}</td>
+            <th>Fecha:</th>
+            <td>{{fecha}}</td>
+        </tr>
+        <tr>
+            <th>Negocio:</th>
+            <td>{{cuenta}}</td>
+        </tr>
+        </tbody>
+    </table>
+    <table id="detalle">
+        <thead>
+        <tr>
+            <th></th>
+            <th>Descripción</th>
+            <th>Cod. Producto</th>
+            <th>Serie</th>
+            <th>P.Asignada</th>
+            <th>Devolución</th>
+            <th>Plazo Dev.</th>
+            <th>Evaluación</th>
+            <td>Cant. Entrega</td>
+            <td>Cant. Dev.</td>
+            <th>Almacén</th>
+            <th>Estado</th>
+        </tr>
+        </thead>
+        <tbody>
+        {{#each detalle}}
+            <tr>
+                <td></td>
+                <td>{{descripcion}}</td>
+                <td>{{codigo}}</td>
+                <td class="text-center">{{hasSerie serie}}</td>
+                <td>{{num_doc}}</td>
+                <td class="text-center">{{devolucion}}</td>
+                <td class="text-center">INDEFINIDO</td>
+                <td class="text-center">{{evaluacion}}</td>
+                <td class="text-right">{{cantidad}}</td>
+                <td class="text-right">{{cantidad_devolucion}}</td>
+                <td>{{almacen}}</td>
+                <td>{{estado}}</td>
+            </tr>
+        {{/each}}
+        </tbody>
+    </table>
+</main>
+{{>footer}}

@@ -1,0 +1,53 @@
+{{>header}}
+<main>
+    <h2>Cargo Relevo Almacen</h2>
+    <table id="cabecera">
+        <tbody>
+        <tr>
+            <th>Fecha:</th>
+            <td>{{fecha_inicio}}</td>
+            <th>DNI:</th>
+            <td>{{documento}}</td>
+            <th>Persona asignada:</th>
+            <td>{{nombre}}</td>
+        </tr>
+        <tr>
+            <th>Correo:</th>
+            <td>{{correo}}</td>
+            <th>Comentario:</th>
+            <td>{{comentario}}</td>
+        </tr>
+        </tbody>
+    </table>
+    <table id="detalle">
+        <thead>
+        <tr>
+            <th></th>
+            <th>Descripción</th>
+            <th>Cod. Producto</th>
+            <th>Serie</th>
+            <th>Negocio</th>
+            <th>Categoría</th>
+            <th>Uni. Medida</th>
+            <th>Cantidad</th>
+            <th>Incidente</th>
+        </tr>
+        </thead>
+        <tbody>
+        {{#each articulos}}
+            <tr>
+                <td></td>
+                <td>{{descripcion}}</td>
+                <td>{{codigo}}</td>
+                <td>{{hasSerie serie}}</td>
+                <td>{{negocio}}</td>
+                <td>{{categoria}}</td>
+                <td>{{unidad_medida}}</td>
+                <td class="text-right">{{cantidad}}</td>
+                <td>{{yerOrNo incidencia}}</td>
+            </tr>
+        {{/each}}
+        </tbody>
+    </table>
+</main>
+{{>footer}}

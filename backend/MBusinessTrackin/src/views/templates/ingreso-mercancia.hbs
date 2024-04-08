@@ -1,0 +1,54 @@
+{{>header}}
+<main>
+    <h2>Ingreso de mercaderia</h2>
+    <table id="cabecera">
+        <tbody>
+        <tr>
+            <th>Codigo:</th>
+            <td>{{codigo}}</td>
+            <th>Guia/Sol:</th>
+            <td>{{tipo}}</td>
+            <th>Documento:</th>
+            <td>{{documento}}</td>
+        </tr>
+        <tr>
+            <th>Num. Doc.:</th>
+            <td>{{num_doc}}</td>
+            <th>Almacen:</th>
+            <td>{{almacen}}</td>
+            <th>Fecha:</th>
+            <td>{{fecha}}</td>
+        </tr>
+        </tbody>
+    </table>
+
+    <table id="detalle">
+        <thead>
+        <tr>
+            <th></th>
+            <th>Descripción</th>
+            <th>Cod. Producto</th>
+            <th>Serie</th>
+            <th>Cantegoría</th>
+            <th>Negocio</th>
+            <th>Cantidad</th>
+            <th>Stock</th>
+        </tr>
+        </thead>
+        <tbody>
+        {{#each DetalleMovimientoMercancia}}
+            <tr>
+                <td></td>
+                <td>{{descripcion}}</td>
+                <td>{{Articulo.codigo}}</td>
+                <td>{{hasSerie serie}}</td>
+                <td>{{categoria}}</td>
+                <td>{{TipoNegocio.cuenta}}</td>
+                <td class="text-right">{{cantidad}}</td>
+                <td class="text-right">{{stock}}</td>
+            </tr>
+        {{/each}}
+        </tbody>
+    </table>
+</main>
+{{>footer}}

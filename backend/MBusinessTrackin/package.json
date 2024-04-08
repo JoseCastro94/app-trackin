@@ -1,0 +1,46 @@
+{
+  "name": "base",
+  "version": "1.0.0",
+  "description": "Base de estructura del proyecto warehouse",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon src/index.js"
+  },
+  "keywords": [
+    "App",
+    "Warehouse",
+    "NodeJs"
+  ],
+  "author": "Richard Brandon Ramos Vilcapoma",
+  "license": "ISC",
+  "dependencies": {
+    "aws-sdk": "^2.1190.0",
+    "axios": "^0.27.2",
+    "bcrypt": "^5.1.0",
+    "body-parser": "^1.20.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.1",
+    "excel4node": "^1.8.0",
+    "express": "^4.18.1",
+    "express-fileupload": "^1.4.0",
+    "handlebars": "^4.7.7",
+    "helmet": "^6.0.1",
+    "html-pdf": "^3.0.1",
+    "jsonwebtoken": "^8.5.1",
+    "mariadb": "^3.0.0",
+    "morgan": "^1.10.0",
+    "node-fetch": "^3.2.10",
+    "nodemailer": "^6.7.7",
+    "puppeteer": "^19.2.2",
+    "sequelize": "^6.20.1",
+    "uuid": "^8.3.2",
+    "xlsx": "^0.18.5"
+  },
+  "devDependencies": {
+    "mysql2": "^2.3.3",
+    "nodemon": "^2.0.21",
+    "puppeteer-core": "^19.3.0"
+  }
+}

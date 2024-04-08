@@ -1,0 +1,6 @@
+.menu-display div:nth-child(3) {
+    background-color: #000064;
+}
+.menu-display .MuiBackdrop-invisible {
+    display: none;
+}
